@@ -94,17 +94,16 @@
                         @if (Auth::check())
                             @if(Auth::user()->permiso == 1)
 
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ Auth::user()->name }}
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="{{ url('/home') }}">Pagina principal</a>
-                                </div>
-
-
-                                {{--<a id="navba" class="nav-link " href="{{ url('/homeAdm') }}" role="button">--}}
-                                {{--{{ Auth::user()->name }}--}}
+                                {{--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                                    {{--{{ Auth::user()->name }}--}}
                                 {{--</a>--}}
+                                {{--<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">--}}
+                                    {{--<a class="dropdown-item" href="{{ url('/home') }}">Pagina principal</a>--}}
+                                {{--</div>--}}
+
+                                <a id="navba" class="nav-link " href="{{ url('/home') }}" role="button">
+                                {{ Auth::user()->name }}
+                                </a>
                             @else
                                 <a id="navba" class="nav-link " href="{{ url('/home') }}" role="button">
                                     {{ Auth::user()->name }}
