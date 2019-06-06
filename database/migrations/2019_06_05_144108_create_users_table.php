@@ -19,6 +19,13 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('apellido_p')->nullable();
+            $table->string('apellido_m')->nullable();
+            $table->string('ci')->nullable();
+            $table->boolean('sexo')->nullable();
+            $table->integer('celular')->nullable();
+            $table->date('birthday')->nullable();
+            $table->integer('permiso')->default(0);
             $table->integer('idposition')->nullable()->unsigned();
             $table->foreign('idposition')->references('id')->on('positions')->onDelete('cascade');
             $table->integer('idbranch')->nullable()->unsigned();

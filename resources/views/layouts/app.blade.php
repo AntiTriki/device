@@ -98,8 +98,7 @@
                                     {{ Auth::user()->name }}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="{{ url('/homeAdm') }}">Pagina principal</a>
-                                    <a class="dropdown-item" href="#">Ver perfil</a>
+                                    <a class="dropdown-item" href="{{ url('/home') }}">Pagina principal</a>
                                 </div>
 
 

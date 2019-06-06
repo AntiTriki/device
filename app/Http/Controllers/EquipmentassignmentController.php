@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Equipmentassignment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class EquipmentassignmentController extends Controller
 {
@@ -14,7 +16,14 @@ class EquipmentassignmentController extends Controller
      */
     public function index()
     {
-        //
+        $asig = DB::table('equipmentassignments')->get();
+        $user = DB::table('users')->get();
+        $posi = DB::table('positions')->get();
+        $branch = DB::table('branches')->get();
+        $pc = DB::table('pcs')->get();
+        $peri = DB::table('peripherals')->get();
+        $occu = DB::table('occurences')->get();
+        return view('device.equipmentassignments',['asig'=>$asig,'user'=>$user,'pc'=>$pc,'posi'=>$posi,'branch'=>$branch,'peri'=>$peri,'occu'=>$occu]);
     }
 
     /**
